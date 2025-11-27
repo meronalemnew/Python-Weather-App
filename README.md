@@ -1,32 +1,37 @@
-# 🌤️ Python Weather App
+# 🌦️ Python Weather App
 
-A simple command-line weather application written in Python.  
-It fetches real-time weather data from the OpenWeather API and displays:
-
-- City and country
-- Temperature (°C)
-- “Feels like” temperature
-- Weather condition (e.g. Broken clouds)
-- Humidity
-- Wind speed
+A simple command-line weather app written in Python that fetches real-time weather data for any city using the OpenWeatherMap API.  
+It was built as part of my journey back into tech and to practice working with APIs, environment variables, and error handling.
 
 ---
 
-## 🚀 Features
+## 📸 Demo
 
-- Uses the OpenWeather API for live data
-- Handles invalid city names and basic network errors
-- Lets you check multiple cities in a loop
-- Keeps your API key secure using a `.env` file
-- Easy to run on macOS or any system with Python 3
+> Example of the app running in the terminal:
+
+![Weather App Screenshot](assets/weather-app.png)
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Features
 
-- **Language:** Python 3
-- **Libraries:** `requests`, `python-dotenv`
-- **API:** [OpenWeather Current Weather API](https://openweathermap.org/current)
+- Get current weather for any city 🌍  
+- Shows temperature in **Celsius (°C)** and **Fahrenheit (°F)**  
+- Displays “feels like” temperature  
+- Shows basic condition (e.g. *clear sky, overcast clouds*)  
+- Graceful error handling for:
+  - Invalid or unknown city names  
+  - Network/API issues  
+  - Missing API key in `.env`
+
+---
+
+## 🛠 Tech Stack
+
+- **Language:** Python 3  
+- **HTTP Client:** `requests`  
+- **Environment Variables:** `python-dotenv`  
+- **API:** OpenWeatherMap (Current Weather Data)
 
 ---
 
@@ -35,5 +40,32 @@ It fetches real-time weather data from the OpenWeather API and displays:
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/python-weather-app.git
-cd python-weather-app
+git clone https://github.com/meronalemnew/Python-Weather-App.git
+cd Python-Weather-App
+### 2️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+### 3️⃣ Create a `.env` file
+
+In the project folder, create a file called `.env` and add:
+
+```env
+OPENWEATHER_API_KEY=your_api_key_here
+### 4️⃣ Run the app
+
+```bash
+python3 weather.py
+## 👩🏾‍💻 About This Project
+
+This project demonstrates how to build a simple command-line weather application using Python and the OpenWeatherMap API.  
+It focuses on:
+
+- Making HTTP requests with `requests`  
+- Working with environment variables through `python-dotenv`  
+- Handling potential errors using `try/except`  
+- Converting temperature units (Kelvin → Celsius → Fahrenheit)  
+- Returning clean, readable output in the terminal  
+- Following good project structure and version control practices  
+
+The project is designed to be lightweight, easy to run, and extendable for future improvements such as multi-day forecasts or additional weather metrics.

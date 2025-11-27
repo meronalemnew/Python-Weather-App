@@ -1,12 +1,20 @@
 # 🌦️ Python Weather App
 
-This is a small weather application I built while getting back into coding.  
-It now includes **two versions**:
+A small weather application built with Python.  
+It has two versions:
 
 - a command-line version  
-- a simple web version built with Flask  
+- a simple web version built with Flask (and deployed on Render)
 
-Both versions use the OpenWeatherMap API to fetch the current weather for any city.
+Both versions use the OpenWeather API to fetch real-time weather data for any city.
+
+---
+
+## 🌐 Live Demo
+
+You can try the web version here:
+
+👉 https://python-weather-app-aepm.onrender.com/
 
 ---
 
@@ -16,26 +24,30 @@ Both versions use the OpenWeatherMap API to fetch the current weather for any ci
 
 ---
 
-## ✨ What the app does
+## ✨ Features
 
-- Gets the current weather for any city  
-- Shows temperature in Celsius and Fahrenheit  
-- Shows a short description (like “clear sky” or “overcast clouds”)  
-- Handles errors (wrong city name, no API key, network issues)
+- Get current weather for any city  
+- Temperature in Celsius and Fahrenheit  
+- Short description (clear sky, overcast clouds, etc.)  
+- Error handling for invalid city names or network issues  
+- Keeps API keys out of source code using environment variables  
+- Works both in the terminal and in the browser  
 
 ---
 
-## 🛠 Tools and Libraries
+## 🛠 Tools Used
 
 - Python 3  
-- Flask (for the web version)  
+- Flask  
 - Requests  
 - python-dotenv  
-- OpenWeatherMap API
+- Gunicorn (for deployment)  
+- OpenWeather API  
+- Render (hosting)
 
 ---
 
-# ⚙️ How to set it up
+# ⚙️ Setup (Local)
 
 ## 1. Clone the project
 
